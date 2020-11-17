@@ -1,4 +1,4 @@
-local split = require "mini-string-split"
+local split = require (arg[1] and arg[1]:match("(.+)%.lua") or "mini-string-split")
 
 local s = "a b -c d"
 local r = split(s, " %-",false)
